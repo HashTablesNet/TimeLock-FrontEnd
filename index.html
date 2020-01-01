@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>TokenLock</title>
+
+  <!-- Font Awesome Icons -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic'
+    rel='stylesheet' type='text/css'>
+
+  <!-- Plugin CSS -->
+  <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+  <!-- Theme CSS - Includes Bootstrap -->
+  <link href="css/creative.css" rel="stylesheet">
+
+  <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+  <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger text-dark" href="#page-top">TokenLock</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto my-2 my-lg-0 text-black">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger  text-dark" href="#freeze">Freeze</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigge text-dark" href="#user">Users</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger text-dark" href="#stats">Stats</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger text-dark" href="#community">Community</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Masthead -->
+  <header class="masthead  bg-light text-black">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center justify-content-center text-center">
+        <div class="col-lg-10 align-self-end">
+          <h1 class="text-uppercase text-black font-weight-bold">Token Lock</h1>
+          <hr class="divider my-4">
+        </div>
+        <div class="col-lg-8 align-self-baseline">
+          <p class="text-black-75 font-weight-dark mb-5">Lock any ERC20 token for any period to show your Proof of
+            Commitment.</p>
+          <a class="btn btn-primary btn-xl js-scroll-trigger" href="#freeze">Freeze some now!</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- Freeze Section -->
+  <section class="page-section" id="freeze">
+      <div class="container text-center">
+        <h2 class="mb-4">Freeze Tokens</h2>
+        <div class="row h-100 align-items-center justify-content-center text-center">
+          <div class="col-lg-8 align-self-baseline pb-5">
+            <p class="text-black-75 font-weight-light mb-5">
+              Freeze any ERC20 compatible token for a default period of 5 minutes. You can add time once completed.<br />
+              <br />
+              <div class="form-group row">
+  
+                <div class="col align-baseline">
+                  <div id="freezeBox">
+                    <input type="amout" class="form-control input-sm pull-right " disabled id="freezeAmount" placeholder="100">
+                    <input type="token" class="form-control input-sm pull-right" disabled id="tokenAddress" placeholder="ERC20 Contract Address">
+                    <div id="freezeTokenInfo" class="">
+                        <div class="text-right strong token-info float-left">Name:</div>
+                        <div class="text-left strong token-info float-left" id="tokenInfoName">N/A</div>
+
+                        <div class="text-right strong token-info float-left">Symbol:</div>
+                        <div class="text-left strong token-info float-left" id="tokenInfoSymbol">N/A</div>
+
+                        <div class="text-right strong token-info float-left">Decimals:</div>
+                        <div class="text-left strong token-info float-left" id="tokenInfoDecimals">1</div>
+
+                        <div class="text-right strong token-info float-left">Balance:</div>
+                        <div class="text-left strong token-info float-left" id="tokenInfoBalance">N/A</div>                        
+                      </div>
+                    <a class="btn btn-primary btn-md ml-1 my-1 mx-1 pull-left enableEthereum" id="freezeButton" href="#freeze">Connect to
+                      MetaMask</a>
+                  </div>
+                </div>
+              </div>
+              <br />
+            </p>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+
+  <!-- User Stats Section -->
+  <section class="page-section bg-dark text-white" id="user">
+      <div class="container text-center">
+        <h2 class="mb-4">Account Status</h2>
+        <div class="row h-100 align-items-center justify-content-center text-center">
+          <div class="col-lg-8 align-self-baseline pb-5">
+            <p class="text-black-75 font-weight-light mb-5">
+              Manage your deposits and extend freeze duration here.<br />
+              <br />
+            </p>
+          </div>
+          <div class="statsBox">Loading Stats...Please <a href="#" class="enableEthereum">Enable MetaMask</a></div>
+        </div>
+      </div>
+      </div>
+    </section>
+
+
+      <!-- General Stats Section -->
+  <section class="page-section" id="stats">
+      <div class="container text-center">
+        <h2 class="mb-4">Contract Stats</h2>
+        <div class="row h-100 align-items-center justify-content-center text-center">
+          <div class="col-lg-8 align-self-baseline pb-5">
+            <p class="text-black-75 font-weight-light mb-5">
+              Top 10 Tokens.<br />
+              <br />
+              <div class="form-group row">
+Stats
+              </div>
+              <br />
+            </p>
+          </div>
+          <div class="statsBox">Loading Stats...Please <a href="#" class="enableEthereum">Enable MetaMask</a></div>
+        </div>
+      </div>
+      </div>
+    </section>
+  <!-- Footer -->
+  <footer class="bg-light py-5">
+    <div class="container">
+      <div class="small text-center text-muted">TokenLock - v0.1.1</div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+  <script charset="utf-8" src="https://cdn.ethers.io/scripts/ethers-v4.min.js" type="text/javascript">
+  </script>
+
+  <script src="js/web3.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/creative.js"></script>
+  <script src="js/main.js"></script>
+
+
+</body>
+
+</html>
